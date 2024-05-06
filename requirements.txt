@@ -1,2 +1,5 @@
 reportlab
 WeasyPrint
+wheel
+setuptools
+psycopg2
