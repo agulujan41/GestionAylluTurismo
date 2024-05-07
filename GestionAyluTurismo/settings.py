@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'GestionAyluTurismo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tu nombre de usuario',
+        'NAME': 'bbdd_nombre',
         'USER':'postgres',
-        'PASSWORD':'tucontraseña',
+        'PASSWORD':'bbdd_contraseña',
         'HOST':'127.0.0.1',
         'DATABASE_PORT':'5432'
     }
@@ -120,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'GestionAPP/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

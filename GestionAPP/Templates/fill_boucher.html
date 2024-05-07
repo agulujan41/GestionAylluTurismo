@@ -1,13 +1,108 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bouchers</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    
+    <link rel="stylesheet" href="{% static 'css/styleVoucherFormulario.css' %}">
 </head>
 <body>
-    <form action="" method="POST">
-        
+    
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+            <tr>
+                <td class="titulo_table">Cliente:</td>
+                <td class="selectCliente"> 
+                
+                <select name="" id="">
+                    <option value="" selected disabled>Selecciona cliente</option>
+                    {% for cliente in clientes %}
+                        <option value="">{{cliente}}</option>
+                    {% endfor %}
+                </select>
+                <div class="botones">
+                    <span class="material-symbols-outlined">add
+                    </span>
+                    <input type="button" value="Agregar cliente" >
+                </div>
+                <div class="botones">
+                    <span class="material-symbols-outlined">search
+                    </span>
+                    <input type="button" value="Buscar" >
+                </div>
+                
+                    
+                 
+                
+                </td>
+               
+            </tr>
+            <tr><td class="titulo_table">Excursiones:</td>
+                <td>
+                    <div class="botones" id="btnAddExcursion">
+                        <span class="material-symbols-outlined">add
+                        </span>
+                        <input type="button" value="Agregar excursión" >
+                </div>
+            </td>
+            </tr>
+        </table>   
+        <div class="excursiones" id="excursiones">
+            
+        </div>
+
+        <div>
+            <div class="botones">
+                <span class="material-symbols-outlined">save
+                </span>
+                <input type="button" value="Guardar cambios" > </input>
+            </div>
+        </div>
+       
     </form>
+   
 </body>
+<script type="text/javascript" >
+    let excursion = `
+    <div class="excursion_single">
+            <span class="titulo_excursion">Excursión:</span>
+
+            <div class="fill_excursion_single"> 
+                <select name="" id="">
+                    <option value="" disabled selected>Seleccionar excursión</option>
+                    {% for excursion in excursiones %}
+                    <option value=""> {{excursion}} </excursion>  
+                    {% endfor %}
+                </select>
+                <div class="cantidaddiv"><span>Cantidad de personas:</span> <input type="number" name="" max='20' min='1' id="" value="1" class='cant'></div>
+                <div class="botones">
+                    <span class="material-symbols-outlined">add
+                    </span>
+                    <input type="button" value="Agregar una excursión" >
+                </div>
+                <div class="botones">
+                    <span class="material-symbols-outlined">search
+                    </span>
+                    <input type="button" value="Buscar" >
+                </div>
+                <div class="botones close" >
+                    <span class="material-symbols-outlined">close
+                    </span>
+                    
+                </div>
+            </div>
+            
+    </div>
+    `;
+    var excursiones = document.getElementById('excursiones');
+    var btnAddExcursion = document.getElementById('btnAddExcursion')
+    btnAddExcursion.onclick = function(){
+    excursiones.insertAdjacentHTML('beforeend',excursion);
+    
+    }
+
+</script>
+<script type="text/javascript" src="{% static  'js/voucherFormulario.js' %}"></script>
 </html>

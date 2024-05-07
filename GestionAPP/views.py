@@ -9,6 +9,7 @@ import io
 from django.http import FileResponse
 from reportlab.pdfgen import canvas
 import os
+from GestionAPP.models import Clientes,Excursiones
 # Create your views here.
 def export_pdf(request):
     HTML('./GestionAPP/ReportsTemplates/report.html').write_pdf('./GestionAPP/ReportsTemplates/Outputs/example.pdf')
@@ -33,5 +34,6 @@ def export_pdf(request):
 def bouchers_customize(request):
     if request.POST:
         pass
-
-    return render(request,"fill_boucher.html",{})
+    clientes = Clientes.objects.all()
+    excursiones = Excursiones.objects.all()
+    return render(request,"fill_boucher.html",{"clientes":clientes,"excursiones":excursiones})

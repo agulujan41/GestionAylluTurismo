@@ -26,17 +26,18 @@ class Excursiones(models.Model):
     anotacion = models.CharField(max_length=100)
     precio = models.FloatField()
     def __str__(self) :
-        return f"{self.lugar.capitalize()} - {self.precio}" 
+        return f"{str(self.lugar).capitalize()} - {self.precio}" 
 class Viaje(models.Model):
     excursion = models.ForeignKey(Excursiones,on_delete=models.CASCADE)
     fecha_salida = models.DateTimeField()
     fecha_retorno = models.DateTimeField()
     transporte = models.ForeignKey(Transporte,on_delete=models.CASCADE,null=True,blank=True)
-
+    def __str__(self) :
+        return f"{str(self.excursion).capitalize()} - {self.fecha_salida}" 
 class Clientes(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
-    DNI_pasaporte = models.CharField(max_length=50)
+    DNI_pasaporte = models.CharField(max_length=50,primary_key=True)
     
     def __str__(self) :
         return f"{self.apellido}, {self.nombre} - {self.DNI_pasaporte}"
