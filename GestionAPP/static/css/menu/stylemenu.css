@@ -1,0 +1,36 @@
+.menuLeftContainer{
+    height: 100vh;
+    width: 60px;
+    margin-top: 0;
+    background-color: darkslategray;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerLMItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px;
+    gap: 20px;
+}
+.menuLeftItem{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+.menuLeftItem:hover{
+    border: 1px solid white;
+    
+}
+.menuLeftItem span{
+    color: white;;
+}

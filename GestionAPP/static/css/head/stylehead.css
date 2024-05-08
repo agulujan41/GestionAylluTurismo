@@ -1,0 +1,29 @@
+.headContainer{
+    margin-top: 60px;
+    height: 60px;
+    width: 100%;
+    z-index: 100;
+    background-color: darkslategray;
+    position: fixed;
+    display: flex;
+    top: 0;
+    align-items: center;
+    display: flex;
+
+}
+.headContainerContent{
+    display: flex;
+    margin-left: 60px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.headContainer span{
+    color: white;
+}
+.headContainer h1{
+    color: white;
+    font-size: 1em;
+    z-index: 101;
+
+}

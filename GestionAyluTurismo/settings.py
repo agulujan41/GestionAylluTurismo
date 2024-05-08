@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'GestionAyluTurismo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bbdd_nombre',
+        'NAME': 'aylugestion',
         'USER':'postgres',
-        'PASSWORD':'bbdd_contraseña',
+        'PASSWORD':'4292035',
         'HOST':'127.0.0.1',
         'DATABASE_PORT':'5432'
     }

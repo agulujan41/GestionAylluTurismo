@@ -1,0 +1,51 @@
+.barUserContainer{
+    z-index: 101;
+    height: 60px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+}
+.titleBar{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    gap: 10px;
+}
+.titleBar h1{
+    font-size: 1.3em;
+    color: rgb(245, 160, 4);
+
+}
+.titleBar img{
+    height: 30px;
+}
+.userToolsBar{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-right: 15px;
+    align-items: center;
+}
+
+.userToolsBar div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.userToolsBar h1{
+    color: darkslategray;
+    font-size: 0.8em;
+}
+
+.userToolsBar span{
+    color: darkslategray;
+
+}
+#user_span{
+    color:#2731F8;
+}

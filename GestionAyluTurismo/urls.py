@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from GestionAPP.views import export_pdf,bouchers_customize
+from GestionAPP.views import export_pdf,bouchers_customize,vista_previa_report
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('fillboucher/',bouchers_customize),
     path('exportPDF/',export_pdf),
+    path('vista_previa_report/',vista_previa_report),
 ]

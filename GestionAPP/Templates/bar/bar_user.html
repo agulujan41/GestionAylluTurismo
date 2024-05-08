@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/bar/bar_user.css' %}">
+    </head>
+    <body>
+        <div class="barUserContainer">
+
+            <div class="titleBar">
+                <img src="{% static 'features/icons/ayllu_turismo.png' %}" alt="">
+                <h1>managment</h1>
+            </div>
+            <div class="userToolsBar">
+                <div class="user_account">
+                    <span class="material-symbols-outlined" id="user_span">person
+                    </span>
+                    <h1>Agustin Lujan (Desarrollador)</h1>
+                </div>
+                <div class="user_log_out">
+                    <span class="material-symbols-outlined" id="logout_span">logout
+                    </span>
+                    <h1>Cerrar sesión</h1>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
